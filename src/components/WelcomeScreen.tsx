@@ -1,5 +1,7 @@
 import { Sparkles } from "lucide-react";
-import leapIllustration from "@/assets/leap-illustration.png";
+import illustrationLeap from "@/assets/illustration-leap.png";
+import illustrationWorking from "@/assets/illustration-working.png";
+import illustrationBoundaries from "@/assets/illustration-boundaries.png";
 
 interface WelcomeScreenProps {
   onSuggestionClick: (suggestion: string) => void;
@@ -7,15 +9,15 @@ interface WelcomeScreenProps {
 
 const suggestions = [
   {
-    image: leapIllustration,
+    image: illustrationLeap,
     text: "I want to change careers, but I can't afford a pay cut or to start over",
   },
   {
-    image: leapIllustration,
+    image: illustrationWorking,
     text: "I feel stuck at my current level and my hard work isn't leading to a promotion",
   },
   {
-    image: leapIllustration,
+    image: illustrationBoundaries,
     text: "I'm successful on paper but exhausted in reality. How do I set boundaries without hurting my reputation?",
   },
 ];
@@ -45,8 +47,8 @@ export function WelcomeScreen({ onSuggestionClick }: WelcomeScreenProps) {
             onClick={() => onSuggestionClick(suggestion.text)}
             className="w-full flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft hover:shadow-medium hover:border-accent/30 transition-all duration-200 text-left group"
           >
-            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-accent/10 transition-colors overflow-hidden">
-              <img src={suggestion.image} alt="" className="w-10 h-10 object-contain" />
+            <div className="flex-shrink-0 w-14 h-14">
+              <img src={suggestion.image} alt="" className="w-full h-full object-contain" />
             </div>
             <span className="text-[15px] text-foreground">{suggestion.text}</span>
           </button>
