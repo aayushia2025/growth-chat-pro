@@ -7,15 +7,15 @@ interface WelcomeScreenProps {
 const suggestions = [
   {
     icon: TrendingUp,
-    text: "How do I negotiate a better salary?",
+    text: "I want to change careers, but I can't afford a pay cut or to start over",
   },
   {
     icon: Target,
-    text: "I'm feeling stuck in my career. How do I find new direction?",
+    text: "I feel stuck at my current level and my hard work isn't leading to a promotion",
   },
   {
     icon: MessageCircle,
-    text: "How do I build executive presence?",
+    text: "I'm successful on paper but exhausted in reality. How do I set boundaries without hurting my reputation?",
   },
 ];
 
@@ -32,12 +32,12 @@ export function WelcomeScreen({ onSuggestionClick }: WelcomeScreenProps) {
         Meet Your <span className="italic">Mentor</span>
       </h1>
       <p className="text-muted-foreground text-center max-w-md mb-8">
-        Get personalized guidance on career growth, leadership, negotiations, and more from your AI career coach.
+        Expand your career potential and experience growth with these personalized recommendations.
       </p>
 
       {/* Suggestion Cards */}
       <div className="w-full max-w-lg space-y-3">
-        <p className="text-sm text-muted-foreground text-center mb-4">Try asking:</p>
+        <p className="text-sm text-muted-foreground text-center mb-4">What's top of mind today?</p>
         {suggestions.map((suggestion, index) => (
           <button
             key={index}
