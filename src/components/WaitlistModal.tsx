@@ -21,7 +21,7 @@ import { supabase } from "@/integrations/supabase/client";
 const waitlistSchema = z.object({
   email: z.string().trim().email({ message: "Please enter a valid email" }).max(255),
   fullName: z.string().trim().min(2, { message: "Name must be at least 2 characters" }).max(100),
-  roleType: z.enum(["student", "full-time", "part-time"], { required_error: "Please select your current role" }),
+  roleType: z.enum(["student", "job-searching", "full-time"], { required_error: "Please select your current role" }),
   company: z.string().trim().max(100).optional(),
   careerGoals: z.array(z.string()).min(1, { message: "Please select at least one goal" }),
 });
@@ -30,15 +30,15 @@ type WaitlistFormData = z.infer<typeof waitlistSchema>;
 
 const roleOptions = [
   { value: "student", label: "Student" },
-  { value: "full-time", label: "Full-time Job" },
-  { value: "part-time", label: "Part-time Gig" },
+  { value: "job-searching", label: "Job searching" },
+  { value: "full-time", label: "Full-time" },
 ];
 
 const goalOptions = [
-  { value: "change-role", label: "Change role" },
-  { value: "switch-company", label: "Switch company" },
-  { value: "get-promoted", label: "Get promoted" },
-  { value: "succeed-existing", label: "Succeed in existing role" },
+  { value: "land-job", label: "Land a job" },
+  { value: "change-role-company", label: "Change role/company" },
+  { value: "career-success", label: "Career success in current role" },
+  { value: "max-potential", label: "Reach my max potential" },
 ];
 
 interface WaitlistModalProps {
@@ -63,7 +63,7 @@ export function WaitlistModal({ open, onOpenChange }: WaitlistModalProps) {
   });
 
   const selectedRole = form.watch("roleType");
-  const showCompanyField = selectedRole === "full-time" || selectedRole === "part-time";
+  const showCompanyField = selectedRole === "full-time";
 
   const onSubmit = async (data: WaitlistFormData) => {
     setIsSubmitting(true);
