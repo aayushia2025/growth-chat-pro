@@ -1,27 +1,30 @@
 import { CourseCard } from "@/components/CourseCard";
-import { MessageSquare, Mic, Sparkles, Trophy } from "lucide-react";
+import { KeyRound, TrendingUp, Users, Trophy } from "lucide-react";
 
 const courses = [
   {
     id: 1,
-    title: "Communication Course",
+    title: "The \"Golden Handcuffs\" Escape Plan",
+    description: "Engineer a safe, high-reward career pivot without starting from the bottom.",
     totalModules: 5,
     completedModules: 2,
-    icon: <MessageSquare className="h-6 w-6" />,
+    icon: <KeyRound className="h-5 w-5" />,
   },
   {
     id: 2,
-    title: "Executive Communication",
+    title: "Breaking the Invisible Ceiling",
+    description: "Shift from \"High-Performing Doer\" to \"Strategic Leader.\"",
     totalModules: 5,
     completedModules: 0,
-    icon: <Mic className="h-6 w-6" />,
+    icon: <TrendingUp className="h-5 w-5" />,
   },
   {
     id: 3,
-    title: "Powerful Presence",
+    title: "Power, Politics, and Influence",
+    description: "Navigate workplace friction without burnout.",
     totalModules: 5,
     completedModules: 5,
-    icon: <Sparkles className="h-6 w-6" />,
+    icon: <Users className="h-5 w-5" />,
   },
 ];
 
@@ -44,11 +47,12 @@ export const CoursesPanel = () => {
       </div>
 
       {/* Courses List */}
-      <div className="flex-1 overflow-y-auto p-6 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-3">
         {courses.map((course) => (
           <CourseCard
             key={course.id}
             title={course.title}
+            description={course.description}
             totalModules={course.totalModules}
             completedModules={course.completedModules}
             icon={course.icon}

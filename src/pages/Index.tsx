@@ -20,8 +20,8 @@ const Index = () => {
 
   return (
     <div className="flex h-screen bg-gradient-subtle">
-      {/* Left Half - Chat */}
-      <div className="w-1/2 flex flex-col border-r border-border">
+      {/* Left 2/3 - Chat */}
+      <div className="w-2/3 flex flex-col border-r border-border">
         <ChatHeader hasMessages={hasMessages} onClear={clearMessages} />
 
         <div 
@@ -51,8 +51,8 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Right Half - Courses */}
-      <div className="w-1/2">
+      {/* Right 1/3 - Courses */}
+      <div className="w-1/3">
         <CoursesPanel />
       </div>
     </div>

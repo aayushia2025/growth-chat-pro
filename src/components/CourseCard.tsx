@@ -3,6 +3,7 @@ import { BookOpen, CheckCircle2 } from "lucide-react";
 
 interface CourseCardProps {
   title: string;
+  description?: string;
   totalModules: number;
   completedModules: number;
   icon?: React.ReactNode;
@@ -10,6 +11,7 @@ interface CourseCardProps {
 
 export const CourseCard = ({ 
   title, 
+  description,
   totalModules, 
   completedModules,
   icon 
@@ -18,21 +20,24 @@ export const CourseCard = ({
   const isCompleted = completedModules === totalModules;
 
   return (
-    <div className="bg-card border border-border rounded-xl p-5 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
-      <div className="flex items-start gap-4">
-        <div className={`p-3 rounded-lg ${isCompleted ? 'bg-green-500/10 text-green-500' : 'bg-primary/10 text-primary'}`}>
-          {icon || <BookOpen className="h-6 w-6" />}
+    <div className="bg-card border border-border rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
+      <div className="flex items-start gap-3">
+        <div className={`p-2.5 rounded-lg shrink-0 ${isCompleted ? 'bg-green-500/10 text-green-500' : 'bg-primary/10 text-primary'}`}>
+          {icon || <BookOpen className="h-5 w-5" />}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-foreground truncate">{title}</h3>
-          <div className="flex items-center gap-2 mt-1">
+          <h3 className="font-semibold text-foreground text-sm leading-tight">{title}</h3>
+          {description && (
+            <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{description}</p>
+          )}
+          <div className="flex items-center gap-2 mt-2">
             {isCompleted ? (
-              <span className="text-sm text-green-500 flex items-center gap-1">
-                <CheckCircle2 className="h-4 w-4" />
+              <span className="text-xs text-green-500 flex items-center gap-1">
+                <CheckCircle2 className="h-3.5 w-3.5" />
                 Completed
               </span>
             ) : (
-              <span className="text-sm text-muted-foreground">
+              <span className="text-xs text-muted-foreground">
                 {completedModules}/{totalModules} modules
               </span>
             )}
@@ -40,8 +45,8 @@ export const CourseCard = ({
         </div>
       </div>
       
-      <div className="mt-4">
-        <Progress value={progressPercent} className="h-2" />
+      <div className="mt-3">
+        <Progress value={progressPercent} className="h-1.5" />
       </div>
     </div>
   );
