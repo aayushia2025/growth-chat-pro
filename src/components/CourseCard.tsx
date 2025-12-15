@@ -20,7 +20,7 @@ export const CourseCard = ({
   return (
     <div className="bg-card border border-border rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:border-primary/30">
       <div className="flex items-start gap-3">
-        <div className={`p-2.5 rounded-lg shrink-0 ${isCompleted ? 'bg-green-500/10 text-green-500' : 'bg-primary/10 text-primary'}`}>
+        <div className={`p-2.5 rounded-lg shrink-0 ${isCompleted ? 'bg-muted text-muted-foreground' : 'bg-primary/10 text-primary'}`}>
           {icon || <BookOpen className="h-5 w-5" />}
         </div>
         <div className="flex-1 min-w-0">
