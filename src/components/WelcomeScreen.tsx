@@ -31,12 +31,9 @@ export function WelcomeScreen({ onSuggestionClick }: WelcomeScreenProps) {
       </div>
 
       {/* Headline */}
-      <h1 className="font-serif text-3xl md:text-4xl text-center mb-3">
+      <h1 className="font-serif text-3xl md:text-4xl text-center mb-8">
         Meet Your <span className="italic">Mentor</span>
       </h1>
-      <p className="text-muted-foreground text-center max-w-md mb-8">
-        Expand your career potential and experience growth with these personalized recommendations.
-      </p>
 
       {/* Suggestion Cards */}
       <div className="w-full max-w-lg space-y-3">
