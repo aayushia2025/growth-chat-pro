@@ -1,4 +1,3 @@
-import { Progress } from "@/components/ui/progress";
 import { BookOpen, CheckCircle2 } from "lucide-react";
 
 interface CourseCardProps {
@@ -16,7 +15,6 @@ export const CourseCard = ({
   completedModules,
   icon 
 }: CourseCardProps) => {
-  const progressPercent = (completedModules / totalModules) * 100;
   const isCompleted = completedModules === totalModules;
 
   return (
@@ -45,8 +43,28 @@ export const CourseCard = ({
         </div>
       </div>
       
-      <div className="mt-3">
-        <Progress value={progressPercent} className="h-1.5" />
+      {/* Progress Circles */}
+      <div className="mt-3 flex items-center justify-center gap-0">
+        {Array.from({ length: totalModules }).map((_, index) => (
+          <div key={index} className="flex items-center">
+            <div
+              className={`w-4 h-4 rounded-full border-2 transition-colors duration-300 ${
+                index < completedModules
+                  ? 'bg-green-500 border-green-500'
+                  : 'bg-muted border-muted-foreground/30'
+              }`}
+            />
+            {index < totalModules - 1 && (
+              <div
+                className={`w-4 h-0.5 transition-colors duration-300 ${
+                  index < completedModules - 1
+                    ? 'bg-green-500'
+                    : 'bg-muted-foreground/30'
+                }`}
+              />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
