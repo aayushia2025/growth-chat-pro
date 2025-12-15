@@ -20,7 +20,7 @@ export function ChatHeader({ hasMessages, onClear }: ChatHeaderProps) {
           </div>
           <div>
             <h1 className="font-serif text-lg font-medium">Mentor</h1>
-            <p className="text-xs text-muted-foreground">Expand your career potential and experience growth with these personalized recommendations.</p>
+            <p className="text-xs text-muted-foreground">Reach your max potential and unlock career growth</p>
           </div>
         </div>
 
