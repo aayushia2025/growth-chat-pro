@@ -14,7 +14,7 @@ export function ChatHeader({ hasMessages, onClear }: ChatHeaderProps) {
           <Sparkles className="w-4 h-4 text-accent-foreground" />
         </div>
         <div>
-          <h1 className="font-serif text-lg font-medium">Career Coach</h1>
+          <h1 className="font-serif text-lg font-medium">Mentor</h1>
           <p className="text-xs text-muted-foreground">AI-powered career guidance</p>
         </div>
       </div>
