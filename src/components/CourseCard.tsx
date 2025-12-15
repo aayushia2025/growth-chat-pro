@@ -24,7 +24,7 @@ export const CourseCard = ({
           {icon || <BookOpen className="h-5 w-5" />}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="font-medium text-foreground text-sm leading-loose tracking-wide">{title}</h3>
+          <h3 className="font-bold text-foreground text-sm leading-loose tracking-wide">{title}</h3>
           {description && (
             <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{description}</p>
           )}
