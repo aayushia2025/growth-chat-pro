@@ -31,7 +31,7 @@ type WaitlistFormData = z.infer<typeof waitlistSchema>;
 const roleOptions = [
   { value: "student", label: "Student" },
   { value: "job-searching", label: "Job searching" },
-  { value: "full-time", label: "Full-time" },
+  { value: "full-time", label: "Full-time job" },
 ];
 
 const goalOptions = [
