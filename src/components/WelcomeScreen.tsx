@@ -29,7 +29,7 @@ export function WelcomeScreen({ onSuggestionClick }: WelcomeScreenProps) {
 
       {/* Headline */}
       <h1 className="font-serif text-3xl md:text-4xl text-center mb-3">
-        Your Career, <span className="italic">Amplified</span>
+        Meet Your <span className="italic">Mentor</span>
       </h1>
       <p className="text-muted-foreground text-center max-w-md mb-8">
         Get personalized guidance on career growth, leadership, negotiations, and more from your AI career coach.
