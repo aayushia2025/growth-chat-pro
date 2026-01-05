@@ -1,14 +1,20 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { ChatHeader } from "@/components/ChatHeader";
 import { ChatMessage } from "@/components/ChatMessage";
 import { ChatInput } from "@/components/ChatInput";
 import { WelcomeScreen } from "@/components/WelcomeScreen";
 import { CoursesPanel } from "@/components/CoursesPanel";
 import { useCareerChat } from "@/hooks/useCareerChat";
+import { WaitlistModal } from "@/components/WaitlistModal";
 
 const Index = () => {
   const { messages, isLoading, sendMessage, clearMessages } = useCareerChat();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+
+  const handleInteraction = () => {
+    setWaitlistOpen(true);
+  };
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -29,7 +35,7 @@ const Index = () => {
           className="flex-1 overflow-y-auto"
         >
           {!hasMessages ? (
-            <WelcomeScreen onSuggestionClick={sendMessage} />
+            <WelcomeScreen onSuggestionClick={handleInteraction} />
           ) : (
             <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
               {messages.map((message, index) => (
@@ -46,7 +52,7 @@ const Index = () => {
 
         <div className="border-t border-border bg-card/80 backdrop-blur-sm">
           <div className="max-w-2xl mx-auto px-4 py-4">
-            <ChatInput onSend={sendMessage} isLoading={isLoading} />
+            <ChatInput onSend={handleInteraction} isLoading={isLoading} />
           </div>
         </div>
       </div>
@@ -55,6 +61,8 @@ const Index = () => {
       <div className="w-1/3">
         <CoursesPanel />
       </div>
+
+      <WaitlistModal open={waitlistOpen} onOpenChange={setWaitlistOpen} />
     </div>
   );
 };
