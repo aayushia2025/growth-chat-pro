@@ -4,6 +4,7 @@ import { ChatMessage } from "@/components/ChatMessage";
 import { ChatInput } from "@/components/ChatInput";
 import { WelcomeScreen } from "@/components/WelcomeScreen";
 import { CoursesPanel } from "@/components/CoursesPanel";
+import { HiringToolkit } from "@/components/HiringToolkit";
 import { useCareerChat } from "@/hooks/useCareerChat";
 import { WaitlistModal } from "@/components/WaitlistModal";
 
@@ -61,9 +62,14 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Right 1/3 - Courses */}
-        <div className="w-1/3">
-          <CoursesPanel />
+        {/* Right 1/3 - Hiring Toolkit (top) + Courses (bottom) */}
+        <div className="w-1/3 flex flex-col">
+          <div className="flex-shrink-0">
+            <HiringToolkit />
+          </div>
+          <div className="flex-1 overflow-hidden border-t border-border">
+            <CoursesPanel />
+          </div>
         </div>
       </div>
 
