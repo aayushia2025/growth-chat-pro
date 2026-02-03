@@ -31,8 +31,8 @@ const Index = () => {
         className="flex h-screen bg-gradient-subtle cursor-pointer"
         onClick={handleInteraction}
       >
-        {/* Left 2/3 - Chat */}
-        <div className="w-2/3 flex flex-col border-r border-border">
+        {/* Left 1/2 - Chat */}
+        <div className="w-1/2 flex flex-col border-r border-border">
           <ChatHeader hasMessages={hasMessages} onClear={clearMessages} />
 
           <div 
@@ -62,8 +62,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Right 1/3 - Hiring Toolkit (top) + Courses (bottom) */}
-        <div className="w-1/3 flex flex-col">
+        {/* Right 1/2 - Hiring Toolkit (top) + Courses (bottom) */}
+        <div className="w-1/2 flex flex-col">
           <div className="flex-shrink-0">
             <HiringToolkit />
           </div>
