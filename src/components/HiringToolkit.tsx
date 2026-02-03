@@ -4,21 +4,21 @@ import { Card, CardContent } from "@/components/ui/card";
 const tools = [
   {
     id: 1,
-    title: "Resume Builder",
-    description: "Upload job description, get ATS-optimized resume",
+    title: "Resume",
+    description: "ATS-ready Resume, recruiters have to say YES to",
     icon: <FileText className="h-5 w-5" />,
   },
   {
     id: 2,
-    title: "Template Resumes",
-    description: "Industry-specific resume templates",
-    icon: <Files className="h-5 w-5" />,
+    title: "Interview Prep",
+    description: "Top Interview Questions with answering frameworks",
+    icon: <Mic className="h-5 w-5" />,
   },
   {
     id: 3,
-    title: "Interview Prep",
-    description: "Practice with AI-powered mock interviews",
-    icon: <Mic className="h-5 w-5" />,
+    title: "Networking",
+    description: "The Hidden Market: LinkedIn Networking & Outreach Scripts",
+    icon: <Files className="h-5 w-5" />,
   },
 ];
 
