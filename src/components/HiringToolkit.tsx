@@ -29,7 +29,7 @@ export const HiringToolkit = () => {
       <div className="p-6 border-b border-border bg-card/50">
         <h2 className="text-xl font-bold text-foreground">Hiring Toolkit</h2>
         <p className="text-sm text-muted-foreground mt-1">
-          Land your dream role faster
+          Unlock Your Next Big Move: All in one place to reach your career goals.
         </p>
       </div>
 
