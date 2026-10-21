@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/4725fd1c-ce30-4ed8-b5eb-bd1bb318fe75
+**URL**: https://growth-chat-pro.lovable.app
 
 ## How can I edit this code?
 
