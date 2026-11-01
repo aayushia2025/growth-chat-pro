@@ -1,8 +1,8 @@
 # Meet your AI-Mentor
 
 ## Project info
-Link to the project: 
-**URL**: https://growth-chat-pro.lovable.app
+**Link**
+https://growth-chat-pro.lovable.app
 
 ## What to expect?
 
