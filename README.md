@@ -13,5 +13,7 @@ AI-Mentor allows you to get guidance at the right stage of your career.
 
 **Chat** allows you to get answers to specific questions
 
+**Hiring tool kit** is to help find your next dream opportunity
+
 **Courses** are designed to help navigate common corporate scenarios
 
