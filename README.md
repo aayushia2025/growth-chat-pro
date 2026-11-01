@@ -1,9 +1,12 @@
-# Welcome to my Lovable project
+# Meet your AI-Mentor
 
 ## Project info
-
+Link to the project: 
 **URL**: https://growth-chat-pro.lovable.app
 
 ## What to expect?
+
+AI-Mentor allows you to get guidance at the right stage of your career.
+
 
 
